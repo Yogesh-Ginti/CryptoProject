@@ -1,5 +1,6 @@
 import './App.css'
 import Sidebar from './components/Market'
+import Portfolio from './components/Portfolio'
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <Sidebar/>
+      <Portfolio />
     </>
   )
 }
