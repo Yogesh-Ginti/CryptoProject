@@ -1,4 +1,5 @@
 import './App.css'
+import CryptoCurrency from './components/CryptoCurrency'
 import Currency from './components/Currency'
 import Exchanger from './components/Exchanger'
 import Sidebar from './components/Market'
@@ -14,6 +15,7 @@ function App() {
       <Portfolio />
       <Exchanger />
       <Currency />
+      <CryptoCurrency />
       
     </>
   )
