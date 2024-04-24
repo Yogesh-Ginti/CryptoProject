@@ -5,6 +5,7 @@ import { fetchCryptocurrencies } from '../redux/async/cryptoSlice';
 const Sidebar = () => {
   const dispatch = useDispatch();
   const { cryptocurrencies, status, error } = useSelector((state) => state.cryptocurrencies);
+  const cryptos = cryptocurrencies.slice(0,30)
 
   useEffect(() => {
     if (status === 'idle') {
@@ -24,7 +25,7 @@ const Sidebar = () => {
     <div className="bg-gray-200 p-4">
       <h2 className="text-lg font-bold mb-4">Cryptocurrencies By Market Cap</h2>
       <ul>
-        {cryptocurrencies.map(crypto => (
+        {cryptos.map(crypto => (
           <li key={crypto.id} className="mb-2">
             <span className="text-blue-500 mr-2">{crypto.symbol.toUpperCase()}</span>
             <span>{crypto.price_change_percentage_24h}</span>
