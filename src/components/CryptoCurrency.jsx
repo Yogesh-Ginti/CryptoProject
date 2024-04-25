@@ -10,6 +10,7 @@ function CryptoCurrency() {
   const handleCoin =(e)=>{
     dispatch(chooseCoin(e.target.value))
   }
+  console.log(baseCoin)
 
   return (
     <div>

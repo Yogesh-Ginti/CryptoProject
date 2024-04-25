@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const coinSlice = createSlice({
+export const coinSlice = createSlice({
   name : "coins",
   initialState:{
     baseCoin : "bitcoin"

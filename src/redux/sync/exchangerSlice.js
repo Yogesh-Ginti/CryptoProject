@@ -11,7 +11,7 @@ const initialState = {
   err: '',
 };
 
-const exchangerSlice = createSlice({
+export const exchangerSlice = createSlice({
   name: 'exchanger',
   initialState,
   reducers: {
