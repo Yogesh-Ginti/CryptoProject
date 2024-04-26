@@ -6,6 +6,7 @@ import coinReducer from '../redux/sync/coinSlice';
 import chartReducer from '../redux/async/chartSlice';
 import timeframeReducer from '../redux/sync/timeframeSlice';
 import chartTypeReducer from '../redux/sync/chartTypeSlice';
+import searchSlice from '../redux/async/searchSlice';
 
 
 const store = configureStore({
@@ -16,7 +17,8 @@ const store = configureStore({
     coins : coinReducer,
     chart : chartReducer,
     time : timeframeReducer,
-    chartType : chartTypeReducer
+    chartType : chartTypeReducer,
+    search: searchSlice,
   },
 });
 

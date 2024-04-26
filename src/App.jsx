@@ -7,6 +7,8 @@ import Sidebar from './components/Market'
 import Portfolio from './components/Portfolio'
 import TimeFrames from './components/TimeFrames'
 import ChartDropdown from './components/ChartDropdown'
+import SearchBar from './components/SearchBar'
+import Header from './components/Header'
 // import LineChart from './features/charts/LineChart'
 // import BarChart from './features/charts/BarChart'
 
@@ -24,6 +26,8 @@ function App() {
       <CryptoCurrency />
       <ChartDropdown />
       <Chart/>
+      <Header />
+      <SearchBar />
       
       
     </>
