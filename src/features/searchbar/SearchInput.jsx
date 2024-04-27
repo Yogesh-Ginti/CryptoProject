@@ -19,12 +19,12 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="flex items-center border-6 border-black border-solid bg-blue-300">
+    <div className="flex items-center shadow-md shadow-gray-300 w-full bg-white rounded-md mb-10 ml-10 pl-3 h-[30px]">
       <FaSearch style={{ marginRight: '8px' }} />
       <input
-        className="border-0"
+        className="border-0 ml-2 w-full h-full bg-transparent focus:outline-none"
         type="text"
-        placeholder="Search for coins..."
+        placeholder="Search by coins..."
         value={searchTerm}
         onChange={handleInputChange}
       />
