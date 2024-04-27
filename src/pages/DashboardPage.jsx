@@ -29,7 +29,11 @@ function DashboardPage() {
               <div className='col-start-12 col-span-3'><ChartDropdown /></div>
             </div>
 
-            <div><Chart /></div>
+            
+            <div className=''>
+              <Chart />
+            </div>
+            
 
           </div>
 

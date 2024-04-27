@@ -34,7 +34,7 @@ function Chart() {
 
   return (
     <>
-      <div>
+      <div className='h-[30rem]'>
       {/* Render chart content here, based on chartData */}
       { usedChart==='lineChart'? <LineChart/> : <BarChart/> }
     </div>
