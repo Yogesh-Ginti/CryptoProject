@@ -63,62 +63,69 @@ function Exchanger() {
   };
 
   return (
-    <div className="bg-gray-200 w-[600px] h-[300px] p-6">
-      <h1 className="text-2xl font-bold">Exchange Coins</h1>
-      <div className="flex gap-16">
-        <h2 className="text-xl text-red-500 font-semibold">Sell</h2>
-        <select value={fromCoin} onChange={handleFromCoin}>
-          <option value="" disabled>
-            Select Coin
-          </option>
-          {cryptocurrencies.map((coin) => (
-            <option key={coin.id} value={coin.current_price}>
-              {coin.name}
+    <>
+      <div className="flex flex-col gap-6 h-[300px] p-6">
+        <h1 className="text-2xl font-bold">Exchange Coins</h1>
+        <div className="flex gap-16">
+          <h2 className="text-xl text-red-500 font-semibold">Sell</h2>
+          <select value={fromCoin} onChange={handleFromCoin}
+          className='bg-slate-100'>
+            <option value="" disabled>
+              Select Coin
             </option>
-          ))}
-        </select>
+            {cryptocurrencies.map((coin) => (
+              <option key={coin.id} value={coin.current_price}>
+                {coin.name}
+              </option>
+            ))}
+          </select>
 
-        <div className="flex flex-col">
-          <label htmlFor="SellAmt">Enter Value</label>
-          <input
-            type="number"
-            onChange={handleQty}
-            value={qty}
-            placeholder="Qty of Selling Coins"
-            style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }}
-          />
+          <div className="flex flex-col">
+            <label htmlFor="SellAmt">Enter Value</label>
+            <input
+              className='w-20'
+              type="number"
+              onChange={handleQty}
+              value={qty}
+              placeholder="Qty of Selling Coins"
+              style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }}
+            />
+          </div>
+        </div>
+
+        <div className="flex gap-16">
+          <h2 className="text-xl text-green-500 font-semibold">Buy</h2>
+
+          <select value={toCoinId} onChange={handleToCoin}
+          className='bg-slate-100'>
+            <option value="" disabled>
+              Select Coin
+            </option>
+            {cryptocurrencies.map((coin) => (
+              <option key={coin.id} value={coin.id}>
+                {coin.name}
+              </option>
+            ))}
+          </select>
+
+          <span>
+            <span className="text-red-500">{err}</span>
+            <span className="font-semibold">
+              {getCoins !== null ? `${getCoins} ${toCoinSymbol}` : ''}
+            </span>
+          </span>
+        </div>
+
+        <div className='flex justify-center'>
+        <button
+          className="text-white bg-blue-500 px-5 py-2 rounded-md font-semibold "
+          onClick={handleExchange}
+        >
+          Exchange
+        </button>
         </div>
       </div>
-
-      <div className="flex gap-16">
-        <h2 className="text-xl text-green-500 font-semibold">Buy</h2>
-
-        <select value={toCoinId} onChange={handleToCoin}>
-          <option value="" disabled>
-            Select Coin
-          </option>
-          {cryptocurrencies.map((coin) => (
-            <option key={coin.id} value={coin.id}>
-              {coin.name}
-            </option>
-          ))}
-        </select>
-
-        <span>
-          <span className="text-red-500">{err}</span>
-          <span className="font-semibold">
-            {getCoins !== null ? `${getCoins} ${toCoinSymbol}` : ''}
-          </span>
-        </span>
-      </div>
-
-      <button
-        className="text-white bg-blue-500 px-5 py-2 rounded-md font-semibold"
-        onClick={handleExchange}
-      >
-        Exchange
-      </button>
-    </div>
+    </>
   );
 }
 

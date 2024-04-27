@@ -8,7 +8,7 @@ ChartJs.register(ArcElement, Tooltip, Legend);
 
 
 function PieChart() {
-  const { cryptocurrencies, status, error } = useSelector((state) => state.cryptocurrencies);
+  const { cryptocurrencies } = useSelector((state) => state.cryptocurrencies);
   const cryptos = cryptocurrencies.slice(0,3).map((item)=>item.id)
   const prices = cryptocurrencies.slice(0,3).map((item)=>item.current_price)
   

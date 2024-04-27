@@ -22,23 +22,23 @@ function Chart() {
       const args = { baseCoin, baseCurrency,fromTime, toTime };
       dispatch(fetchChart(args));
     }
-  }, [dispatch, baseCoin, baseCurrency, fromTime, toTime]); // Ensure all dependencies are listed
+  }, [dispatch, baseCoin, baseCurrency, fromTime, toTime]);
 
   if (status === 'loading') {
-    return <div>Loading...</div>; // Show loading indicator
+    return <div className='flex items-center justify-center text-xl h-[30rem]' >Loading...</div>;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>; // Show error message
+    return <div className='flex items-center justify-center text-xl h-[30rem]'>Getting Some Error..</div>; 
   }
 
-  // If no issues, render the chart data
   return (
-    <div>
-      <h2>{baseCoin} Chart</h2>
+    <>
+      <div>
       {/* Render chart content here, based on chartData */}
       { usedChart==='lineChart'? <LineChart/> : <BarChart/> }
     </div>
+    </>
   );
 }
 

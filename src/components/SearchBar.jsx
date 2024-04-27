@@ -1,4 +1,3 @@
-// src/components/SearchBar.js
 import React from 'react';
 import SearchInput from '../features/searchbar/SearchInput';
 import SearchResults from '../features/searchbar/SearchResults';
@@ -6,10 +5,12 @@ import SearchResults from '../features/searchbar/SearchResults';
 
 const SearchBar = () => {
   return (
-    <div>
-      <SearchInput />
-      <SearchResults />
-    </div>
+    <>
+      <div>
+        <SearchInput />
+        <SearchResults />
+      </div>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
-// Register Chart.js modules
+
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 function LineChart() {
@@ -54,11 +54,11 @@ function LineChart() {
         data: prices,
         fill: false,
         backgroundColor:'rgb(84, 191, 55)',
-        borderColor: 'rgb(84, 191, 55)', // line color
-        pointStyle: 'circle', // circular points on the chart
-        pointRadius: 0.5, // point radius on the chart
-        borderWidth: 2, // line thickness
-        tension: 0.1, // smoothness of the line
+        borderColor: 'rgb(84, 191, 55)', 
+        pointStyle: 'circle', 
+        pointRadius: 0.5, 
+        borderWidth: 2, 
+        tension: 0.1, 
       },
     ],
   };
@@ -70,9 +70,9 @@ function LineChart() {
         position: 'top',
         align: 'end',
         labels: {
-          usePointStyle: true, // use point style in legend
+          usePointStyle: true, 
           font: {
-            size: 15, // larger font size indirectly makes legend point larger
+            size: 15, 
           }
         },
       },
@@ -85,7 +85,7 @@ function LineChart() {
     },
   };
 
-  return <Line data={data} options={options} />;
+  return <Line data={data} options={options} />
 }
 
 export default LineChart;

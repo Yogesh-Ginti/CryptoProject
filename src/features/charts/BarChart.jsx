@@ -11,7 +11,7 @@ import {
   Legend,
 } from 'chart.js';
 
-// Register Chart.js modules for the bar chart
+
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function BarChart() {
@@ -21,7 +21,6 @@ function BarChart() {
   const {baseCurrency} = useSelector(state=> state.currency)
 
   if (!chartData || !chartData.prices) {
-    // Display a loading message or a placeholder if 'chartData.prices' is undefined
     return <div>Loading...</div>;
   }
 
@@ -54,9 +53,9 @@ function BarChart() {
       {
         label: baseCoin,
         data: prices,
-        backgroundColor: 'rgba(54, 162, 235, 0.5)', // Bar color
-        borderColor: 'rgba(54, 162, 235, 1)', // Border color
-        borderWidth: 1, // Border width
+        backgroundColor: 'rgba(54, 162, 235, 0.5)', 
+        borderColor: 'rgba(54, 162, 235, 1)', 
+        borderWidth: 1, 
       },
     ],
   };
@@ -78,7 +77,7 @@ function BarChart() {
     },
     scales: {
       y: {
-        beginAtZero: true, // Start Y-axis at zero
+        beginAtZero: true, 
       },
     },
   };

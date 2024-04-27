@@ -1,4 +1,3 @@
-// src/redux/slices/searchSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -36,6 +35,10 @@ const searchSlice = createSlice({
     setSearchTerm: (state, action) => {
       state.searchTerm = action.payload;
     },
+    resetSearch:(state)=>{
+      state.searchResults = ''
+      state.searchTerm = ''
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -54,5 +57,5 @@ const searchSlice = createSlice({
   },
 });
 
-export const { setSearchTerm } = searchSlice.actions;
+export const { setSearchTerm, resetSearch } = searchSlice.actions;
 export default searchSlice.reducer;

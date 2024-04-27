@@ -19,10 +19,10 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="flex items-center shadow-md shadow-gray-300 w-full bg-white rounded-md mb-10 ml-10 pl-3 h-[30px]">
-      <FaSearch style={{ marginRight: '8px' }} />
+    <div className="flex items-center shadow-md shadow-gray-300 bg-white  rounded-md mb-10 h-[30px]">
+      <FaSearch style={{ marginLeft: '8px' }} />
       <input
-        className="border-0 ml-2 w-full h-full bg-transparent focus:outline-none"
+        className="border-0 ml-2 w-full bg-transparent focus:outline-none"
         type="text"
         placeholder="Search by coins..."
         value={searchTerm}
