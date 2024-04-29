@@ -23,7 +23,7 @@ const Market = () => {
 
   return (
     <>
-      <div className='bg-white p-4 h-[925px] overflow-y-auto'>
+      <div className='bg-white p-4 h-full overflow-y-auto'>
         <h2 className="text-lg font-bold mb-4">Cryptocurrencies By Market Cap</h2>
         <ul className=''>
           {cryptos.map((crypto) => (

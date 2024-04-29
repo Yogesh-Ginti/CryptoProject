@@ -14,12 +14,12 @@ function Chart() {
   const {fromTime, toTime} = useSelector(state=> state.time)
   const {usedChart} = useSelector((state)=> state.chartType)
 
-
+  
 
   useEffect(() => {
     // Avoid dispatching if baseCoin or baseCurrency is missing
     if (baseCoin && baseCurrency && fromTime && toTime ) {
-      const args = { baseCoin, baseCurrency,fromTime, toTime };
+      const args = { baseCoin, baseCurrency,fromTime, toTime };      
       dispatch(fetchChart(args));
     }
   }, [dispatch, baseCoin, baseCurrency, fromTime, toTime]);
@@ -29,7 +29,7 @@ function Chart() {
   }
 
   if (error) {
-    return <div className='flex items-center justify-center text-xl h-[30rem]'>Getting Some Error..</div>; 
+    return <div className='flex items-center justify-center text-xl h-[30rem]'>Error: {error}</div>; 
   }
 
   return (

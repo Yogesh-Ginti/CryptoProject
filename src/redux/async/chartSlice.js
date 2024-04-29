@@ -6,10 +6,11 @@ export const fetchChart = createAsyncThunk(
   async (args, { rejectWithValue }) => {
     try {
       const { baseCurrency, baseCoin, fromTime, toTime } = args;
+      console.log(fromTime)
       const response = await axios.get(
         `https://api.coingecko.com/api/v3/coins/${baseCoin}/market_chart/range?vs_currency=${baseCurrency}&from=${fromTime}&to=${toTime}&precision=2 `
       );
-      console.log(response);
+      
       return response.data;
     } catch (error) {
       return rejectWithValue(error.message || "An unknown error occurred");

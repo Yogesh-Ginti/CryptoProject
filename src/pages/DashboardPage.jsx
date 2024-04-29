@@ -17,20 +17,20 @@ function DashboardPage() {
 
         <div className='col-span-3 '>
 
-          <div className='grid grid-cols-12'>
-            <div className='col-span-4'><Currency /></div>
-            <div className='col-start-5 col-span-6'><SearchBar /></div>
+          <div className='grid grid-cols-6'>
+            <div className='col-span-1'><Currency /></div>
+            <div className='col-start-3 col-span-6'><SearchBar /></div>
           </div>
 
-          <div className='bg-white p-2 pt-4'>
-            <div className='grid grid-cols-12 gap-10'>
-              <div className='col-start-3 col-span-3'><TimeFrames /></div>
+          <div className='bg-white'>
+            <div className='grid grid-cols-12 gap-10 p-4'>
+              <div className='col-start-1 col-span-6 pl-10'><TimeFrames /></div>
               <div className='col-start-9 col-span-3'><CryptoCurrency /></div>
               <div className='col-start-12 col-span-3'><ChartDropdown /></div>
             </div>
 
             
-            <div className=''>
+            <div className='p-2'>
               <Chart />
             </div>
             
@@ -45,7 +45,7 @@ function DashboardPage() {
 
         </div>
 
-        <div className='col-span-1 bg-white'>
+        <div className='col-span-1 h-[133vh] bg-white'>
           <Market />
         </div>
 
