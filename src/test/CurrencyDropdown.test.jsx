@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import Currency from '../components/Currency';
-import currencySlice from '../redux/sync/currencySlice'; // Adjust the import path to your slice
+import currencySlice from '../redux/sync/currencySlice'; 
 
 // Helper function to create a Redux store with a specified initial state
 const createTestStore = (initialBaseCurrency = 'usd') => {
@@ -41,7 +41,7 @@ describe('Currency Component', () => {
       </Provider>
     );
 
-    const dropdown = screen.getByRole('combobox'); // Find the dropdown
+    const dropdown = screen.getByRole('combobox'); 
 
     // Check if the dropdown contains expected options
     const usdOption = screen.getByText('USD');

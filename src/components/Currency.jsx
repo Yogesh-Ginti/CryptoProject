@@ -1,29 +1,35 @@
 import { useSelector, useDispatch } from "react-redux"
-import { chooseCurr } from "../redux/sync/currencySlice"
+import { chooseCurr } from "../redux/sync/currencySlice" // Action to select a base currency
 
-function Currency() {
-  const { baseCurrency } = useSelector(state => state.currency)
-  const dispatch = useDispatch()
+function Currency() { // Component to select a base currency
+  const dispatch = useDispatch() // Redux dispatch function to send actions
+  const { baseCurrency } = useSelector(state => state.currency) // Current base currency from Redux state
 
+  // Handle change in selected currency
   const handleChange = (e) => {
-    dispatch(chooseCurr(e.target.value))
+    dispatch(chooseCurr(e.target.value)) // Dispatch action to update base currency
   }
 
   return (
     <>
-      <div className="h-8 w-20 bg-white text-center">
-        <select value={baseCurrency} onChange={handleChange}>
-          <option value="usd">USD</option>
-          <option value="inr">INR</option>
-          <option value="eur">EUR</option>
-          <option value="btc">BTC</option>
-          <option value="eth">ETH</option>
-          <option value="jpy">JPY</option>
-          <option value="gbp">GBP</option>
+      <div className="h-8 w-20 bg-white text-center"> 
+        {/* Dropdown to select the base currency */}
+        <select 
+          value={baseCurrency} // Current selected currency
+          onChange={handleChange} // Event handler for when the currency is changed
+        >
+          {/* Currency options */}
+          <option value="usd">USD</option> // US Dollar
+          <option value="inr">INR</option> // Indian Rupee
+          <option value="eur">EUR</option> // Euro
+          <option value="btc">BTC</option> // Bitcoin
+          <option value="eth">ETH</option> // Ethereum
+          <option value="jpy">JPY</option> // Japanese Yen
+          <option value="gbp">GBP</option> // British Pound
         </select>
       </div>
     </>
   )
 }
 
-export default Currency
+export default Currency;

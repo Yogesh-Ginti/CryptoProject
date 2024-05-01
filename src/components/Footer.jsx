@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Footer() {
+function Footer() { //component to Render the Footer
   return (
     <div className='bg-green-700 h-8 text-white grid grid-cols-12'>
       <div className='font-semibold col-span-8 text-end'>All Right Are Reserved By Crypto<span className='text-yellow-500'>V</span>erse @2024

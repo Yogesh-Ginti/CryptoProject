@@ -2,8 +2,8 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import CryptoCurrency from '../components/CryptoCurrency';
-import coinSlice from '../redux/sync/coinSlice'; // Adjust the import path
-import cryptocurrenciesSlice from '../redux/async/cryptoSlice'; // Adjust the import path
+import coinSlice from '../redux/sync/coinSlice'; 
+import cryptocurrenciesSlice from '../redux/async/cryptoSlice'; 
 
 // Create a Redux store with initial state and required reducers
 const createTestStore = () => {

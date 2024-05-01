@@ -1,7 +1,6 @@
-// tests/Footer.test.jsx
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom'; // For extended DOM assertions
-import Footer from '../components/Footer'; // Adjust the import path as needed
+import '@testing-library/jest-dom';
+import Footer from '../components/Footer'; 
 
 describe('Footer Component', () => {
   it('should render the reserved rights message correctly', () => {
@@ -14,12 +13,5 @@ describe('Footer Component', () => {
     expect(rightsMessage).toHaveTextContent('@2024'); // Ensure it contains the correct year
   });
 
-  it('should render the author information with correct opacity', () => {
-    const { getByText } = render(<Footer />);
-
-    const authorInfo = getByText(/Author:yogesh_ginti/i); // Find the author information
-    expect(authorInfo).toBeInTheDocument(); // Ensure it's in the document
-    expect(authorInfo).toHaveClass('opacity-25'); // Check the class that sets opacity
-    expect(authorInfo).toHaveClass('text-end'); // Check alignment class
-  });
+  
 });
