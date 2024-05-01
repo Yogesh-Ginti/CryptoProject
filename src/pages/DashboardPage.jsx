@@ -13,7 +13,7 @@ import Market from '../components/Market'
 function DashboardPage() {
   return (
     <>
-      <div className='grid grid-cols-4 gap-4 bg-slate-100 p-4'>
+      <div className='grid grid-cols-4 gap-4 bg-slate-100 p-4 '>
 
         <div className='col-span-3 '>
 
