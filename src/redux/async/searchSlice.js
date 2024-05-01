@@ -36,8 +36,8 @@ const searchSlice = createSlice({
       state.searchTerm = action.payload;
     },
     resetSearch:(state)=>{
-      state.searchResults = ''
       state.searchTerm = ''
+      state.searchResults = []
     }
   },
   extraReducers: (builder) => {

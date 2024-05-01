@@ -89,11 +89,11 @@ function Exchanger() { // to render the Excjhange component
           <div className="flex flex-col">
             <label htmlFor="SellAmt">Enter Value</label>
             <input
-              className='w-20'
+              className='w-20 px-1'
               type="number"
               onChange={handleQty}
               value={qty}
-              placeholder="Qty of Selling Coins"
+              placeholder="Qty"
               style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }}
             />
           </div>
@@ -101,7 +101,6 @@ function Exchanger() { // to render the Excjhange component
 
         <div className="flex gap-16">
           <h2 className="text-xl text-green-500 font-semibold">Buy</h2>
-
           <select value={toCoinId} onChange={handleToCoin}
           className='bg-slate-100'>
             <option value="" disabled>

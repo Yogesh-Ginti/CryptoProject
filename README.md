@@ -66,5 +66,3 @@ Please ensure your code follows the project's coding standards and includes appr
 7. react-redux
 8. react-icons
 
-** special thank:
-  AlmaBetter: to inculde such diverse project 

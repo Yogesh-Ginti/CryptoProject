@@ -14,7 +14,7 @@ function Portfolio() { // Component to display cryptocurrency portfolio
 
   return (
     <>
-      <div>
+      <div className="mt-8">
         {/* Portfolio title and total value display */}
         <div className="flex justify-between"> 
           <h1 className="text-2xl font-bold">Portfolio</h1>  {/*Portfolio title*/}

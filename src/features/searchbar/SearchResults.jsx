@@ -17,6 +17,7 @@ const SearchResults = () => {
 
   return (
     <>
+
       <div className='w-96 absolute h-80 overflow-y-auto'>
         {
           searchResults.length > 0 && (
