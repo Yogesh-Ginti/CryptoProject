@@ -31,7 +31,11 @@ const Market = () => {  // Component displaying top 30 cryptocurrencies by marke
           {cryptos.map((crypto) => ( // Iterate over top 30 cryptocurrencies
             <li key={crypto.id} className="mb-2">
               <div className='flex justify-between'>
-                <span className="text-blue-500 mr-2">{crypto.symbol.toUpperCase()}</span>
+                <div className='flex gap-1'>
+                  <img src={crypto.image} alt="coinlogo" width="25em" height="25em" />
+                  <span className="text-blue-500 mr-2">{crypto.symbol.toUpperCase()}</span>
+                </div>
+
 
                 {/* Determine text color based on price change percentage */}
                 <span
