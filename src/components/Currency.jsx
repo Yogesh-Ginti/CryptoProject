@@ -12,9 +12,10 @@ function Currency() { // Component to select a base currency
 
   return (
     <>
-      <div className="h-8 w-20 bg-white text-center"> 
+      <div className="h-8 w-20 bg-white text-center rounded-md"> 
         {/* Dropdown to select the base currency */}
         <select 
+          className="bg-white"
           value={baseCurrency} // Current selected currency
           onChange={handleChange} // Event handler for when the currency is changed
         >
