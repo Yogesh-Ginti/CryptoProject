@@ -62,8 +62,7 @@ Please ensure your code follows the project's coding standards and includes appr
 2. @reduxjs/toolkit
 3. axios
 4. chart.js
-5. lodash
-6. react-chartjs-2,
-7. react-redux
-8. react-icons
+5. react-chartjs-2,
+6. react-redux
+7. react-icons
 
