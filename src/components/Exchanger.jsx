@@ -53,7 +53,7 @@ function Exchanger() { // to render the Excjhange component
     }
   };
 
-   // Handler for initiating the exchange
+  // Handler for initiating the exchange
   const handleExchange = () => {
     if (fromCoin && qty > 0 && toCoin) {
       const sellingAmt = fromCoin * qty;
@@ -68,25 +68,31 @@ function Exchanger() { // to render the Excjhange component
 
   return (
     <>
-      <div className="flex flex-col gap-6 h-[300px] p-6">
+      <div className="flex flex-col gap-6  p-6">
         {/* Title and setup for Exchange Coins */}
         <h1 className="text-2xl font-bold">Exchange Coins</h1>
-        <div className="flex gap-16">
-          <h2 className="text-xl text-red-500 font-semibold">Sell</h2>
-          <select value={fromCoin} onChange={handleFromCoin}
-          className='bg-slate-100'>
-            <option value="" disabled>
-              Select Coin
-            </option>
-            {cryptocurrencies.map((coin) => (
-              <option key={coin.id} value={coin.current_price}>
-                {coin.name}
+
+        <div className='flex flex-col xl:flex-row gap-8'>
+          <div className="flex gap-8">
+            <h2 className="text-xl text-red-500 font-semibold">Sell</h2>
+            <select value={fromCoin} onChange={handleFromCoin}
+              className='bg-slate-100'>
+              <option value="" disabled>
+                Select Coin
               </option>
-            ))}
-          </select>
+              {cryptocurrencies.map((coin) => (
+                <option key={coin.id} value={coin.current_price}>
+                  {coin.name}
+                </option>
+              ))}
+            </select>
+
+
+
+          </div>
 
           {/* Input for selling quantity */}
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center">
             <label htmlFor="SellAmt">Enter Value</label>
             <input
               className='w-20 px-1'
@@ -102,7 +108,7 @@ function Exchanger() { // to render the Excjhange component
         <div className="flex gap-16">
           <h2 className="text-xl text-green-500 font-semibold">Buy</h2>
           <select value={toCoinId} onChange={handleToCoin}
-          className='bg-slate-100'>
+            className='bg-slate-100'>
             <option value="" disabled>
               Select Coin
             </option>
@@ -113,7 +119,7 @@ function Exchanger() { // to render the Excjhange component
             ))}
           </select>
 
-            {/* Display error and the amount to get */}
+          {/* Display error and the amount to get */}
           <span>
             <span className="text-red-500">{err}</span>
             <span className="font-semibold">
@@ -123,13 +129,13 @@ function Exchanger() { // to render the Excjhange component
         </div>
 
         <div className='flex justify-center'>
-         {/* Display error and the amount to get */} 
-        <button
-          className="text-white bg-blue-500 px-5 py-2 rounded-md font-semibold "
-          onClick={handleExchange}
-        >
-          Exchange
-        </button>
+          {/* Display error and the amount to get */}
+          <button
+            className="text-white bg-blue-500 px-5 py-2 rounded-md font-semibold "
+            onClick={handleExchange}
+          >
+            Exchange
+          </button>
         </div>
       </div>
     </>

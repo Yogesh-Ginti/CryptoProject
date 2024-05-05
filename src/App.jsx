@@ -12,7 +12,7 @@ function App() {
     <>
       <Header />
       <DashboardPage />
-      <Footer />
+      <Footer/>
     </>
   )
 }

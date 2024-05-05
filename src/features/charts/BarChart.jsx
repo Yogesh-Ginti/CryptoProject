@@ -62,6 +62,7 @@ function BarChart() {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'top',
@@ -82,7 +83,9 @@ function BarChart() {
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return <div className='h-[480px]'>
+    <Bar data={data} options={options} />
+  </div>;
 }
 
 export default BarChart;

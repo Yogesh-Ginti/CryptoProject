@@ -65,6 +65,7 @@ function LineChart() {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'top',
@@ -85,7 +86,9 @@ function LineChart() {
     },
   };
 
-  return <Line data={data} options={options} />
+  return <div className='h-[480px]'>
+    <Line data={data} options={options} />
+  </div>
 }
 
 export default LineChart;

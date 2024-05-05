@@ -24,7 +24,7 @@ const Market = () => {  // Component displaying top 30 cryptocurrencies by marke
 
   return (
     <>
-      <div className='bg-white p-4 h-full overflow-y-auto'>
+      <div className='bg-white p-4 h-full overflow-y-auto con' >
         {/* Container with scrollable content */}
         <h2 className="text-lg font-bold mb-4">Cryptocurrencies By Market Cap</h2>
         <ul className=''>
