@@ -12,7 +12,7 @@ import Market from '../components/Market'
 
 function DashboardPage() {
   return (
-    <div className='p-4'>
+    <div className='sm:p-4'>
       <div className='flex flex-col sm:grid sm:grid-cols-4  gap-4 bg-slate-100 m-2'>
         <section className='sm:col-span-3 p-4  '>
           <div className='grid grid-cols-12'>
