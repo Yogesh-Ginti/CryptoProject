@@ -1,5 +1,6 @@
 # Crypto Dashboard Project
 This Web App  is Bulit during the AlmaBetter Full-Stack WebDev Program,This is the Assigned FrontEnd Capstone project.
+It is Responsive for All Mobiles & Desktops
 
 ## Description:
 
