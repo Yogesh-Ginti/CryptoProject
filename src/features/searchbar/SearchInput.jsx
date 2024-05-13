@@ -10,7 +10,7 @@ const SearchInput = () => {
 
   const debouncedFetch = debounce((query) => {
     dispatch(fetchSearchResults(query));
-  }, 300); // Debounce API call by 300 ms
+  }, 500); // Debounce API call by 500 ms
 
   const handleInputChange = (e) => {
     const newSearchTerm = e.target.value;
